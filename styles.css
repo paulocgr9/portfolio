@@ -1,0 +1,135 @@
+body {
+    /* Set line height to 1.5 times the font size
+       and use the OS’s UI font as the website font
+     */
+    font: 100%/1.5 system-ui;
+    max-width: 100ch;
+    margin-inline: auto;
+    padding: 1em;
+   }
+   
+:root {
+    --color-accent: oklch(65% 50% 0);
+}
+
+nav {
+    display: flex;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: oklch(80% 3% 200)
+}
+
+nav a {
+    flex: 1;
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    padding: 0.5em;
+}
+
+nav a.current {
+    flex: 1;
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    padding-bottom: 0.4em;
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    border-bottom-color: oklch(80% 3% 200)
+}
+
+nav a:hover {
+    border-bottom-width: 0.4em;
+    border-bottom-style: solid;
+    border-bottom-color:var(--color-accent);
+    padding-bottom:0.1em;
+    background-color: oklch(from var(--color-accent) 95% 5% h);
+}
+
+/* input, textarea, button {
+    font: inherit;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+label, input, textarea, button {
+    display: block;
+}
+
+label {
+    margin-top: 1rem;
+} */
+
+
+form {
+    display: grid;   
+    grid-template-columns: auto 1fr;
+    gap: 1em;
+}
+form label{
+    display: grid;
+    grid-template-columns: subgrid;
+}
+#button, label{
+    grid-column: 1/-1;
+}
+
+img {
+    max-width: 100%;
+}
+
+.projects {
+    display:grid;
+    grid-template-columns : repeat(auto-fill, minmax(15em, 1fr));
+    min-width: 15em;
+    max-width: 1fr;
+}
+
+.resume {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    min-width: 15em;
+    max-width: 1fr;
+}
+
+article { 
+    margin: 10px;
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+}
+
+article h2{
+    margin: 0;
+}
+
+h1 {
+    size:400%;
+    line-height: 1.1;
+    text-wrap: balance;
+}
+h2 {
+    size:200%;
+    line-height: 1.1;
+    text-wrap: balance;
+}
+h3{
+    size:150%;
+    line-height: 1.1;
+    text-wrap: balance;
+}
+h4{
+    size: 100%;
+    line-height: 1.1;
+    text-wrap: balance;
+}
+h5{
+    size: 75%;
+    line-height: 1.1;
+    text-wrap: balance;
+}
+h6{
+    size: 50%;
+    line-height: 1.1;
+    text-wrap: balance;
+}
